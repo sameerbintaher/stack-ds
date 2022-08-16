@@ -59,6 +59,26 @@ class Stack
           delete delNode;
           return chk;
      }
+
+     // EMPTY
+     bool empty()
+     {
+          if (head == NULL)
+               return true;
+          else
+               return false;
+     }
+
+     // SIZE
+
+     // TOP
+     int top()
+     {
+          if (top == NULL)
+               cout << "Stack underflow | There is no element in stack" << endl;
+          else
+               return top->value;
+     }
 };
 
 int main()
