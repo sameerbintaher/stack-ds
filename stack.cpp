@@ -36,6 +36,29 @@ class Stack
           newNode->prev = top;
           top = newNode;
      }
+
+     // POP
+     int pop()
+     {
+          Node *delNode;
+          delNode = top;
+          int chk = -1;
+          if (head == NULL)
+          {
+               cout << "Stack underflow" << endl;
+               return chk;
+          }
+          if (head == top)
+               head = top = NULL;
+          else
+          {
+               top = delNode->prev;
+               top->next = NULL;
+          }
+          chk = delNode->value;
+          delete delNode;
+          return chk;
+     }
 };
 
 int main()
